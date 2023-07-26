@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Librerias El Búho</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div>
+      <header class="hrelativo">
+        <div class="hrelativodiv">
+          <nav class="hnavegador">
+            <a href="index.html">
+              <img src="./assets/elbuho.png" alt="colibri logo" />
+            </a>
+            <div class="hnavegadorp">
+              <p style="font-size: large; letter-spacing: 0.25rem">EL BÚHO</p>
+              <p style="font-size: small; letter-spacing: 0.35rem">Libreria</p>
+            </div>
+            <div class="hnavegadoropciones">
+              <a href="">Gestion de libros</a>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <main>
+        <form class="bolsaseccion">
+          <div>
+            <label id="librosDestacados" for="libro-input"
+              >Nombre del libro</label
+            >
+            <input
+              id="libro-input"
+              type="text"
+              placeholder="Agregar libro..."
+            />
+          </div>
+          <br />
+          <div>
+            <label id="librosPrecios" for="monto-input">Precio del libro</label>
+            <input
+              id="monto-input"
+              type="number"
+              min="0"
+              placeholder="Agregar precio..."
+            />
+          </div>
+          <button id="agregar-libros-button">
+            <b>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-bag"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"
+                />
+              </svg>
+              Agrega nuevos libros...
+            </b>
+          </button>
+        </form>
+        <p id="separacion">Nuevos libros de la tienda:</p>
+        <div id="notes"></div>
+        <script type="module" src="./js/app.js"></script>
+      </main>
+    </div>
+    <footer id="footer-style"></footer>
+  </body>
+</html>

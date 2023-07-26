@@ -1,0 +1,227 @@
+:root {
+  --main-color-1: #ffffff;
+  --main-color-2: #000000;
+  --main-color-3: #ffd89c;
+  --main-backgroundcolor-1: #f2ee9d;
+  --main-backgroundcolor-2: #3d8361;
+  --main-backgroundcolor-3: #d6cda4;
+  --main-backgroundcolor-4: #41644a;
+  --main-backgroundcolor-5: #7a9d54;
+  --main-backgroundcolor-6: #8c3333;
+  --main-backgroundcolor-7: #5f9df7;
+  --main-backgroundcolor-8: #e7b10a;
+}
+
+@font-face {
+  font-family: "Cinzel Black";
+  src: url(/assets/fonts/Cinzel_Decorative/CinzelDecorative-Black.ttf);
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: url(/assets/fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Josefin Italic";
+  src: url(/assets/fonts/Josefin_Sans/JosefinSans-Italic-VariableFont_wght.ttf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  background-color: var(--main-color-3);
+  display: flex;
+  flex-direction: column;
+}
+body {
+  margin: 0;
+}
+
+.hrelativo {
+  position: relative;
+  width: auto;
+  height: 100px;
+  background-color: var(--main-backgroundcolor-8);
+  color: var(--main-color-2);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: large;
+}
+
+.hrelativodiv {
+  height: auto;
+  width: auto;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.hnavegador {
+  margin: 0px 32.5px 0px 32.5px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hnavegador img {
+  width: 100px;
+  height: 100px;
+  margin-left: 10px;
+}
+
+.hnavegadorp {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Cinzel Black";
+}
+
+.hnavegadoropciones {
+  display: flex;
+  margin-left: 54px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Cinzel Black";
+  color: var(--main-color-2);
+  letter-spacing: 0.5em;
+}
+
+.hnavegadoropciones a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.hnavegadoropciones1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  font-family: "Cinzel Decorative Bold";
+  color: var(--main-color-2);
+}
+
+.hnavegadoropciones1 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.bolsaseccion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background-color: var(--main-backgroundcolor-5);
+  font-family: "Josefin Sans";
+  border-radius: 10px;
+  color: var(--main-color-2);
+  font-size: x-large;
+}
+
+#buscatulibro {
+  border-radius: 5px;
+  padding-bottom: 5px;
+  width: auto;
+}
+
+#montodellibro {
+  border-radius: 5px;
+  padding-bottom: 5px;
+  width: auto;
+}
+#agregar-libros-button {
+  background-color: var(--main-backgroundcolor-7);
+}
+#libro-input,
+#monto-input {
+  border-radius: 5px;
+  height: 30px;
+  width: 250px;
+}
+.bolsaseccion button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  padding: 5px;
+  font-family: "Josefin Sans";
+  width: 400px;
+  margin-top: 15px;
+  font-size: medium;
+  background-color: var(--main-backgroundcolor-5);
+}
+
+#separacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Josefin Sans";
+  margin: 10px auto 10px auto;
+  font-size: x-large;
+}
+
+#notes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Josefin Italic";
+  border-radius: 5px;
+  background-color: var(--main-backgroundcolor-3);
+  height: auto;
+}
+
+#notes .style-component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--main-backgroundcolor-6);
+  border-radius: 5px;
+  margin: 10px;
+  background-color: var(--main-backgroundcolor-1);
+}
+
+.style-component p {
+  font-size: large;
+  margin-bottom: 10px;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+}
+
+.update-field {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}
+.save-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Josefin Italic";
+  font-size: medium;
+}
+.delete-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Josefin Italic";
+  font-size: medium;
+}
+
+#footer-style {
+  background-color: var(--main-backgroundcolor-6);
+  color: #000000;
+  height: 200px;
+  width: auto;
+  border-radius: 5px;
+}
