@@ -9,10 +9,10 @@ import {
   deletePrice, // borra el precio
   updateNote, // actualiza nota
   updatePrices, // actualiza el precio
-  saveNotesToLocalStorage, //salvar elemento en local storage
-  loadNotesFromLocalStorage, // cargar elemento desde local storage
-  loadPriceFormLocalStorage,
-  savePriceToLocalStorage,
+  saveNotesToLocalStorage, //salvar nota en local storage
+  loadNotesFromLocalStorage, // cargar nota desde local storage
+  loadPriceFormLocalStorage, // carga precio desde el local storage
+  savePriceToLocalStorage, // salva precio en el local storage
 } from "./models/model.js"
 //seccion visual en el DOM
 import {
