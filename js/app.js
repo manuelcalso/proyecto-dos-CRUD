@@ -4,25 +4,36 @@
 //seccion logica en models
 import {
   addNote, //agregar nota
+  addPrice, // agregar precio
   deleteNote, //borrar  nota
+  deletePrice, // borra el precio
   updateNote, // actualiza nota
+  updatePrices, // actualiza el precio
   saveNotesToLocalStorage, //salvar elemento en local storage
   loadNotesFromLocalStorage, // cargar elemento desde local storage
+  loadPriceFormLocalStorage,
+  savePriceToLocalStorage,
 } from "./models/model.js"
 //seccion visual en el DOM
-import { updateNotes, getNoteInputValue, clearNoteInput } from "./views/view.js"
+import {
+  updateNotes,
+  getNoteInputValue,
+  clearNoteInput,
+  getPriceInputValue,
+} from "./views/view.js"
 
+let prices = loadPriceFormLocalStorage()
 let notes = loadNotesFromLocalStorage()
 
 //console.log("notes", notes)
 //// SELECCION EN DOM
 const noteInputElement = document.querySelector("#libro-input")
-//const notepriceInputElement = document.querySelector("#monto-input")
+const priceElement = document.querySelector("#precio-input")
 const notesElement = document.querySelector("#notes")
 const addNoteButtonElement = document.querySelector("#agregar-libros-button")
 
 // ACTUALIZAR NOTAS
-updateNotes(notesElement, notes)
+updateNotes(notesElement, notes, priceElement, prices)
 
 //// EVENTOS
 /// AGREGAR NOTA
@@ -31,18 +42,22 @@ addNoteButtonElement.addEventListener("click", (event) => {
 
   ///obtener la nota del input
   const note = getNoteInputValue(noteInputElement)
-  //const price = getPriceInputValue(notepriceInputElement)
+  const price = getPriceInputValue(priceElement)
   //agregue  la nueva nota
   notes = addNote(notes, note)
-  //console.log("newNotes", notes)
+  prices = addPrice(prices, price)
+  //console.log("newPrice", price)
+
   //salvar la nota en local storage
   saveNotesToLocalStorage(notes)
+  savePriceToLocalStorage(prices)
 
   //actualizar las notas
-  updateNotes(notesElement, notes)
+  updateNotes(notesElement, notes, priceElement, prices)
 
   //limpiar el input
   clearNoteInput(noteInputElement)
+  clearNoteInput(priceElement)
 })
 
 notesElement.addEventListener("click", (event) => {
@@ -51,23 +66,37 @@ notesElement.addEventListener("click", (event) => {
     ///borrado
     if (event.target.classList.contains("delete-note")) {
       notes = deleteNote(notes, index)
+      prices = deletePrice(prices, index)
       saveNotesToLocalStorage(notes)
-      updateNotes(notesElement, notes)
+      savePriceToLocalStorage(prices)
+      updateNotes(notesElement, notes, priceElement, prices)
     }
-    //actualiza
-    //if (event.target.classList.contains("update-note")) {
-    // const updateFieldElement =
-    // event.target.parentNode.querySelector(".update.field")
-    //updateFieldElement.style.display = "block"
-    // }
-    //salva despue de la edicion  - actualiza
+    //actualizado
     if (event.target.classList.contains("save-note")) {
-      const updateInputElement = event.target.parentNode.querySelector("input")
+      const updateInputElement = event.target.parentNode.querySelector(
+        "#update-name-" + index
+      )
+
       const updatedNote = updateInputElement.value
 
       notes = updateNote(notes, index, updatedNote)
       saveNotesToLocalStorage(notes)
-      updateNotes(notesElement, notes)
+      updateNotes(notesElement, notes, priceElement, prices)
+
+      const updateFieldElement =
+        event.target.parentNode.querySelector(".update-field")
+      updateFieldElement.style.display = "none"
+    }
+
+    if (event.target.classList.contains("save-price")) {
+      const updateInputElement = event.target.parentNode.querySelector(
+        "#update-price-" + index
+      )
+      const updatedPrice = updateInputElement.value
+
+      prices = updatePrices(prices, index, updatedPrice)
+      savePriceToLocalStorage(prices)
+      updateNotes(notesElement, notes, priceElement, prices)
 
       const updateFieldElement =
         event.target.parentNode.querySelector(".update-field")
