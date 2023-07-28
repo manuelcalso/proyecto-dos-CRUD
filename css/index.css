@@ -215,6 +215,15 @@ body {
   justify-content: center;
   font-family: "Josefin Italic";
   font-size: medium;
+  border-radius: 5px;
+}
+.save-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Josefin Italic";
+  font-size: medium;
+  border-radius: 5px;
 }
 .delete-note {
   display: flex;
@@ -230,6 +239,8 @@ body {
   height: 380px;
   width: auto;
   border-radius: 5px;
+  display: flex;
+  justify-content: center;
 }
 
 .sectionfooter {
