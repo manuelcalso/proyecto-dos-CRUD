@@ -143,7 +143,14 @@ body {
 }
 #agregar-libros-button {
   background-color: var(--main-backgroundcolor-7);
+  border: 2px solid black;
 }
+
+#agregar-libros-button:hover {
+  border: 2px solid yellow;
+  transition-duration: 750ms;
+}
+
 #libro-input,
 #precio-input {
   border-radius: 5px;
@@ -217,6 +224,10 @@ body {
   font-size: medium;
   border-radius: 5px;
 }
+.save-note:hover {
+  background-color: var(--main-backgroundcolor-4);
+  color: var(--main-backgroundcolor-8);
+}
 .save-price {
   display: flex;
   align-items: center;
@@ -225,12 +236,23 @@ body {
   font-size: medium;
   border-radius: 5px;
 }
+
+.save-price:hover {
+  background-color: var(--main-backgroundcolor-4);
+  color: var(--main-backgroundcolor-8);
+}
 .delete-note {
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: "Josefin Italic";
   font-size: medium;
+  border-radius: 5px;
+}
+
+.delete-note:hover {
+  background-color: #000000;
+  color: white;
 }
 
 #footer-style {
@@ -271,6 +293,7 @@ body {
 
 .faceboosvg:hover {
   color: var(--main-backgroundcolor-7);
+  transition-duration: 750ms;
 }
 
 .faceboosvg {
@@ -285,6 +308,7 @@ body {
 
 .instagramsvg:hover {
   color: var(--main-backgroundcolor-7);
+  transition-duration: 750ms;
 }
 
 .instagramspan {
@@ -310,6 +334,7 @@ body {
 
 .twittersvg:hover {
   color: var(--main-backgroundcolor-7);
+  transition-duration: 750ms;
 }
 .gridspan2 {
   grid-column: 2;
@@ -334,6 +359,7 @@ body {
 
 .gridspan2ul li a:hover {
   color: var(--main-backgroundcolor-7);
+  transition-duration: 750ms;
 }
 
 .gridspan3 {
@@ -360,6 +386,7 @@ body {
 
 .gridspan3ul li a:hover {
   color: var(--main-backgroundcolor-7);
+  transition-duration: 750ms;
 }
 
 .gridspan4 {
