@@ -187,7 +187,58 @@ body {
   flex-direction: column;
   font-family: "Josefin Italic";
   border-radius: 5px;
-  background-color: var(--main-backgroundcolor-3);
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-image: linear-gradient(
+      30deg,
+      #d6cda4 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #d6cda4 87.5%,
+      #d6cda4
+    ),
+    linear-gradient(
+      150deg,
+      #d6cda4 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #d6cda4 87.5%,
+      #d6cda4
+    ),
+    linear-gradient(
+      30deg,
+      #d6cda4 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #d6cda4 87.5%,
+      #d6cda4
+    ),
+    linear-gradient(
+      150deg,
+      #d6cda4 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #d6cda4 87.5%,
+      #d6cda4
+    ),
+    linear-gradient(
+      60deg,
+      #d6cda477 25%,
+      transparent 25.5%,
+      transparent 75%,
+      #d6cda477 75%,
+      #d6cda477
+    ),
+    linear-gradient(
+      60deg,
+      #d6cda477 25%,
+      transparent 25.5%,
+      transparent 75%,
+      #d6cda477 75%,
+      #d6cda477
+    );
+  background-size: 20px 35px;
+  background-position: 0 0, 0 0, 10px 18px, 10px 18px, 0 0, 10px 18px;
   height: auto;
 }
 
