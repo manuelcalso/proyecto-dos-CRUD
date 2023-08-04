@@ -1,5 +1,4 @@
 //app.js - CONTROLADOR
-// COMBINA LA PARTE LOGICA CON LA VISUAL
 
 //seccion logica en models
 import {
@@ -105,9 +104,7 @@ notesElement.addEventListener("click", (event) => {
   }
 })
 
-////MANIPULAR NOTA
-//ACTUALIZAR NOTA
-//BORRAR NOTA
+//////////////////////////// PROCESO ALTERNO CON UN OBJETO
 
 // const librosDestacadosElement = document.querySelector("#buscatulibro")
 
