@@ -47,8 +47,6 @@ body {
 
 .hrelativo {
   position: relative;
-  width: auto;
-  height: 100px;
   background-color: var(--main-backgroundcolor-8);
   color: var(--main-color-2);
   border-radius: 10px;
@@ -77,7 +75,6 @@ body {
 .hnavegador img {
   width: 100px;
   height: 100px;
-  margin-left: 10px;
 }
 
 .hnavegadorp {
@@ -92,7 +89,7 @@ body {
   display: flex;
   margin-left: 54px;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   font-family: "Cinzel Black";
   color: var(--main-color-2);
@@ -145,6 +142,8 @@ body {
 #agregar-libros-button {
   background-color: var(--main-backgroundcolor-7);
   border: 2px solid black;
+  display: flex;
+  flex-direction: column;
 }
 
 #agregar-libros-button:hover {
@@ -548,5 +547,25 @@ body {
 
   #notes {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .hrelativo {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hnavegadoropciones {
+    margin-left: 5px;
+  }
+
+  #agregar-libros-button {
+    display: block;
+    width: auto;
+  }
+
+  .gridspan5 {
+    display: none;
   }
 }
