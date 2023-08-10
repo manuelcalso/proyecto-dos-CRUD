@@ -181,7 +181,9 @@ body {
 }
 
 #notes {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -506,6 +508,10 @@ body {
   #footer-style {
     display: flex;
   }
+
+  #notes {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -538,5 +544,9 @@ body {
 
   #footer-style {
     display: flex;
+  }
+
+  #notes {
+    grid-template-columns: 1fr 1fr;
   }
 }

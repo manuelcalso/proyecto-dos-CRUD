@@ -104,7 +104,7 @@ notesElement.addEventListener("click", (event) => {
   }
 })
 
-//////////////////////////// PROCESO ALTERNO CON UN OBJETO
+//////////// PROCESO ALTERNO CON UN OBJETO CLASS//////////////
 
 // const librosDestacadosElement = document.querySelector("#buscatulibro")
 

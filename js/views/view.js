@@ -4,7 +4,6 @@ export function updateNotes(notesElements, notes, priceElement, prices) {
     return /*HMTL*/ `
       <div class="style-component">
           <p>${note}</p>
-          
         <div class="update-field">
             <input type="text" id="update-name-${index}" placeholder="Actualiza el nombre"/>
             <button class="save-note" data-index="${index}">Actualizar Nombre</button>
